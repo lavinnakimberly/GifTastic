@@ -7,7 +7,18 @@ for (var i = 0; i < gifArray.length; i++){
 	$("#buttons").append(buttons);
 }
 
-$("button").on("click", function(){
+$("#addSubmit").on("click", function(){
+	var textSubmit = $("#addText").val();
+	var buttons = $("<button>");
+	buttons.text(textSubmit);
+	buttons.attr("data-disney", textSubmit);
+	$("#buttons").append(buttons);
+	buttons.attr("data-pause", imageURL);
+    buttons.attr("data-animate", giphyURL);
+    buttons.attr("data-state", "pause")
+});
+
+$("#buttons").on("click", "button", function(){
 	var disneyType = $(this).attr("data-disney");
 
 	var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&limit=10&q=" + disneyType;
@@ -35,7 +46,7 @@ $("button").on("click", function(){
     	selectedImage.attr("src", imageURL);
     	selectedImage.attr("data-pause", imageURL);
     	selectedImage.attr("data-animate", giphyURL);
-    	selectedImage.attr("data-state", "pause")
+    	selectedImage.attr("data-state", "pause");
     	selectedImage.attr("alt", "selected image");
 
     	$("#giphys").append(selectedImage);
