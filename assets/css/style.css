@@ -1,0 +1,17 @@
+body {
+	background-image: url("../images/castle.jpg");
+	padding: 20px;
+}
+
+.container {
+	padding: 5px;
+}
+
+img {
+	width: 350px;
+	height: 250px;
+	padding: 10px;
+}
+
+
+

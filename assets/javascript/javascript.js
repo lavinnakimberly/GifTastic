@@ -13,9 +13,9 @@ $("#addSubmit").on("click", function(){
 	buttons.text(textSubmit);
 	buttons.attr("data-disney", textSubmit);
 	$("#buttons").append(buttons);
-	buttons.attr("data-pause", imageURL);
-    buttons.attr("data-animate", giphyURL);
-    buttons.attr("data-state", "pause")
+//	buttons.attr("data-pause", imageURL);
+//  buttons.attr("data-animate", giphyURL);
+//  buttons.attr("data-state", "pause")
 });
 
 $("#buttons").on("click", "button", function(){
