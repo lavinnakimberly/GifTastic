@@ -21,7 +21,7 @@ $("#addSubmit").on("click", function(){
 $("#buttons").on("click", "button", function(){
 	var disneyType = $(this).attr("data-disney");
 
-	var queryURL = "http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&limit=10&q=" + disneyType;
+	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&limit=10&q=" + disneyType;
 
 	$("#giphys").empty();
 
